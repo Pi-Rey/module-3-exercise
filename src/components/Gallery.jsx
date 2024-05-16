@@ -1,12 +1,12 @@
 import Card from './Card';
 import PropTypes from "prop-types";
 
-function Gallery({ data }) {
+function Gallery({ data, removeClub }) {
   return (
     <ul>
       {data.map((club, i) => (
         <li key={i}>
-          <Card club={club} clubId={i} />
+          <Card club={club} clubId={i} removeClub={removeClub} />
         </li>
       ))}
     </ul>
@@ -15,7 +15,8 @@ function Gallery({ data }) {
 
 
 Gallery.propTypes = {
-data: PropTypes.array
+data: PropTypes.array,
+removeClub: PropTypes.func
 }
 
 export default Gallery;

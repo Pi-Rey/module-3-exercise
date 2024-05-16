@@ -33,21 +33,30 @@ function App() {
     setFiltered(value);
   };
 
+
+
+  const removeClub = (index) => {
+    console.log(index);
+    const updatedGallery = [...gallery]; // Crear una copia del array original, porque si hago un .splice() sobre el original lo cambio directamente, y mejor no liarla. 
+    updatedGallery.splice(index, 1); // Eliminar un elemento en el índice especificado
+    setGallery(updatedGallery); // Actualizar el estado con el nuevo array
+  };
+  
+
   const filterArray = gallery.filter((item) => {
     if (filter === "openOnWeekdays") {
       return item.openOnWeekdays;
     } else if (filter === "openOnWeekend") {
       return item.openOnWeekend;
     }
-    return true; // Si no hay filtro, muestra todos los elementos
+    return true; // Si no hay filtro, muestra todos los elementos. También valdría escribir return gallery; porque me devuelve el mismo array inicial
   });
-
 
   return (
     <main className="main">
       <h1>Mis clubs</h1>
       <FilterForm filterClubs={filterClubs} />
-      <Gallery data={filterArray} />
+      <Gallery data={filterArray} removeClub={removeClub} />
       <Form changeNewClub={changeNewClub} addNewClub={addNewClub} />
     </main>
   );

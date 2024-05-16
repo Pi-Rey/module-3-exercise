@@ -24,20 +24,20 @@ function Form({ changeNewClub, addNewClub }) {
         />
       </div>
       <div>
-        <label htmlFor="weekdays">¿Abre entre semana? </label>{" "}
+        <label htmlFor="openOnWeekdays">¿Abre entre semana? </label>{" "}
         {/*mirar si está checked o no*/}
         <input
           type="checkbox"
-          name="weekdays"
+          name="openOnWeekdays"
           id="openOnWeekdays"
           onChange={handleChange}
         />
       </div>
       <div>
-        <label htmlFor="weekend">¿Abre los fines de semana? </label>
+        <label htmlFor="openOnWeekend">¿Abre los fines de semana? </label>
         <input
           type="checkbox"
-          name="weekend"
+          name="openOnWeekend"
           id="openOnWeekend"
           onChange={handleChange}
         />

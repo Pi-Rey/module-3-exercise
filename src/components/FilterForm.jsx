@@ -7,9 +7,9 @@ function FilterForm({filterClubs}) {
     <form>
       <label htmlFor="filter">Mostrar</label>
       <select name="filter" id="filter" onChange={handleFilter} >
-        <option value="">todos</option> {/* ev. volver a meter value "all" */}
-        <option value="openOnWeekdays">los que abren entre semana</option>
-        <option value="openOnWeekend">los que abren el fin de semana</option>
+        <option value="">Todos</option> {/* ev. volver a meter value "all" */}
+        <option value="openOnWeekdays">Los que abren entre semana</option>
+        <option value="openOnWeekend">Los que abren el fin de semana</option>
       </select>
     </form>
   );
