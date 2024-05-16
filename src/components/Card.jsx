@@ -3,6 +3,7 @@ function Card({ club, clubId, removeClub }) {
     const handleRemove = (ev) => {
         console.log(ev.target.id)
         removeClub(ev.target.id)
+
     }
   return (
     <article className="card">
