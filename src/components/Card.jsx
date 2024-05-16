@@ -10,9 +10,9 @@ function Card({ club, clubId, removeClub }) {
       <h3>
         #{clubId + 1} {club.name}
       </h3>
-      <p>Abierto entre semana: {club.openOnWeekdays === true ? `Sí` : `No`}</p>
+      <p>Abierto entre semana: {club.openOnWeekdays === true ? `Sí` : `No`}</p> {/* también valdría y quedaría más limpio y ordenador con {club.openOnWeekdays ? `Sí` : `No`}, lo voy a poner en el operador ternario de abajo*/}
       <p>
-        Abierto el fin de semana: {club.openOnWeekend === true ? `Sí` : `No`}
+        Abierto el fin de semana: {club.openOnWeekend ? `Sí` : `No`} {/* Esto se llamada "renderizado condicional" */}
       </p>
     </article>
   );
