@@ -3,3 +3,32 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.card{
+    background-color: azure;
+    width: 250px;
+    border: 4px dotted rgb(58, 16, 44);
+    margin: 10px;
+    padding: 10px;
+}
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+.btn{
+    width: fit-content;
+    padding: 10px;
+    background-color: rgb(58, 16, 44);
+    color: azure;
+    text-transform: uppercase;
+}
+.xButton{
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(173, 80, 80);
+    color: white;
+    font-weight: bold;
+}
